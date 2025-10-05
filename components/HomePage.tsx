@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { CARS_DATA, TESTIMONIALS } from '../constants';
 import type { Car } from '../types';
 import CarCard from './CarCard';
 import { PriceIcon, SupportIcon, CarRangeIcon, StarIcon, SearchIcon, CalendarIcon, KeyIcon } from './IconComponents';
 import { useLanguage } from '../contexts/LanguageContext';
+import AITripPlanner from './AITripPlanner';
 
 interface HomePageProps {
   onSelectCar: (car: Car) => void;
@@ -11,7 +13,6 @@ interface HomePageProps {
 }
 
 const HomePage: React.FC<HomePageProps> = ({ onSelectCar, onNavigateToCars }) => {
-  // FIX: Destructure 'language' from useLanguage to make it available in the component scope.
   const { t, language } = useLanguage();
   const featuredCars = CARS_DATA.slice(0, 3);
   const todayString = new Date().toISOString().split('T')[0];
@@ -139,6 +140,15 @@ const HomePage: React.FC<HomePageProps> = ({ onSelectCar, onNavigateToCars }) =>
                   </div>
                 </div>
               ))}
+            </div>
+        </div>
+      </section>
+
+      {/* AI Trip Planner Section */}
+      <section className="py-20 bg-background dark:bg-gray-900">
+        <div className="container mx-auto px-6">
+            <div className="animate-fade-in-up">
+                <AITripPlanner />
             </div>
         </div>
       </section>

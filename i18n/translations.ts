@@ -1,3 +1,4 @@
+
 import { Locale } from "../types";
 
 export const translations: { [key: string]: { [key in Locale]: string } } = {
@@ -42,6 +43,13 @@ export const translations: { [key: string]: { [key in Locale]: string } } = {
   wideRangeOfCarsDesc: { en: 'From economical city cars to rugged 4x4s for desert exploration, our diverse fleet has the perfect vehicle for your needs.', fr: 'Des voitures de ville économiques aux 4x4 robustes pour l\'exploration du désert, notre flotte diversifiée a le véhicule parfait pour vos besoins.', ar: 'من سيارات المدينة الاقتصادية إلى سيارات الدفع الرباعي القوية لاستكشاف الصحراء، يمتلك أسطولنا المتنوع السيارة المثالية لاحتياجاتك.' },
   testimonialsTitle: { en: 'What Our Customers Say', fr: 'Ce Que Disent Nos Clients', ar: 'ماذا يقول عملاؤنا' },
   
+  // AI Trip Planner
+  aiPlannerTitle: { en: 'AI Trip Planner', fr: 'Planificateur de Voyage IA', ar: 'مخطط الرحلات بالذكاء الاصطناعي' },
+  aiPlannerSubtitle: { en: 'Let our AI craft a personalized itinerary for your Moroccan adventure!', fr: 'Laissez notre IA créer un itinéraire personnalisé pour votre aventure marocaine !', ar: 'دع الذكاء الاصطناعي الخاص بنا يصمم خط سير رحلة مخصصًا لمغامرتك المغربية!' },
+  aiPlannerPlaceholder: { en: 'e.g., Fes, Chefchaouen, Sahara Desert', fr: 'ex: Fès, Chefchaouen, Désert du Sahara', ar: 'مثال: فاس، شفشاون، الصحراء الكبرى' },
+  generateItinerary: { en: 'Generate Itinerary', fr: 'Générer l\'Itinéraire', ar: 'إنشاء خط سير الرحلة' },
+  aiCrafting: { en: 'Our AI is crafting your personalized journey...', fr: 'Notre IA élabore votre voyage personnalisé...', ar: 'يقوم الذكاء الاصطناعي بصياغة رحلتك الشخصية...' },
+
   // Cars Page
   ourFleet: { en: 'Our Fleet', fr: 'Notre Flotte', ar: 'أسطولنا' },
   ourFleetSubtitle: { en: 'Choose from our wide selection of vehicles to suit your travel needs.', fr: 'Choisissez parmi notre large sélection de véhicules pour répondre à vos besoins de voyage.', ar: 'اختر من بين مجموعتنا الواسعة من السيارات التي تناسب احتياجات سفرك.' },
