@@ -54,12 +54,14 @@ const AppContent: React.FC = () => {
     document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
   }, [language]);
 
-  // Effect for SEO meta tags
+  // Effect for SEO meta tags (title, description, og/twitter, canonical, hreflang, JSON-LD)
   useEffect(() => {
     const t = (key: keyof typeof translations) => translations[key][language];
 
     let title = "Maroc Wheels - " + t('seo_main_title');
     let description = t('seo_main_description');
+    let ogImage = 'https://images.pexels.com/photos/3889868/pexels-photo-3889868.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2';
+    let canonicalPath = '/';
 
     switch (currentPage) {
         case Page.Home:
@@ -68,25 +70,32 @@ const AppContent: React.FC = () => {
         case Page.Cars:
             title = t('ourFleet') + " - MarocWheels";
             description = t('seo_cars_description');
+            canonicalPath = '/cars';
             break;
         case Page.About:
             title = t('aboutUs') + " - MarocWheels";
             description = t('seo_about_description');
+            canonicalPath = '/about';
             break;
         case Page.Contact:
             title = t('contact') + " - MarocWheels";
             description = t('seo_contact_description');
+            canonicalPath = '/contact';
             break;
         case Page.CarDetails:
             if (selectedCar) {
                 title = `${selectedCar.name[language]} - ${t('rent_a')} ${selectedCar.type[language]} | MarocWheels`;
                 description = `${t('rent_the')} ${selectedCar.name[language]}. ${selectedCar.description[language].substring(0, 160)}`;
+                ogImage = selectedCar.images[0] || ogImage;
+                canonicalPath = `/cars?carId=${selectedCar.id}`;
             }
             break;
         case Page.Booking:
             if (selectedCar) {
                 title = `${t('bookYour')} ${selectedCar.name[language]} - MarocWheels`;
                 description = `${t('seo_booking_description')} ${selectedCar.name[language]}.`;
+                ogImage = selectedCar.images[0] || ogImage;
+                canonicalPath = `/booking?carId=${selectedCar.id}`;
             }
             break;
     }
@@ -97,6 +106,87 @@ const AppContent: React.FC = () => {
     if (metaDescription) {
         metaDescription.setAttribute('content', description);
     }
+
+    // Ensure og/twitter tags exist or create them
+    const ensureMeta = (attr: 'property' | 'name', key: string) => {
+      let el = document.querySelector(`meta[${attr}='${key}']`) as HTMLMetaElement | null;
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, key);
+        document.head.appendChild(el);
+      }
+      return el;
+    };
+
+    ensureMeta('property', 'og:title')!.setAttribute('content', title);
+    ensureMeta('property', 'og:description')!.setAttribute('content', description);
+    ensureMeta('property', 'og:image')!.setAttribute('content', ogImage);
+    ensureMeta('property', 'og:url')!.setAttribute('content', window.location.origin + canonicalPath);
+    ensureMeta('property', 'og:type')!.setAttribute('content', currentPage === Page.CarDetails ? 'product' : 'website');
+
+    ensureMeta('name', 'twitter:card')!.setAttribute('content', 'summary_large_image');
+    ensureMeta('name', 'twitter:title')!.setAttribute('content', title);
+    ensureMeta('name', 'twitter:description')!.setAttribute('content', description);
+    ensureMeta('name', 'twitter:image')!.setAttribute('content', ogImage);
+
+    // Canonical and hreflang
+    const ensureLink = (rel: string, hreflang?: string) => {
+      let selector = `link[rel='${rel}']` + (hreflang ? `[hreflang='${hreflang}']` : '');
+      let el = document.querySelector(selector) as HTMLLinkElement | null;
+      if (!el) {
+        el = document.createElement('link');
+        el.setAttribute('rel', rel);
+        if (hreflang) el.setAttribute('hreflang', hreflang);
+        document.head.appendChild(el);
+      }
+      return el;
+    };
+
+    ensureLink('canonical')!.setAttribute('href', window.location.origin + canonicalPath);
+    // Alternate hreflang for languages
+    ensureLink('alternate', 'en')!.setAttribute('href', window.location.origin + canonicalPath);
+    ensureLink('alternate', 'fr')!.setAttribute('href', window.location.origin + canonicalPath);
+    ensureLink('alternate', 'ar')!.setAttribute('href', window.location.origin + canonicalPath);
+
+    // JSON-LD structured data
+    const existingLd = document.getElementById('ld-json');
+    if (existingLd) existingLd.remove();
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.id = 'ld-json';
+
+    const organization = {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'MarocWheels',
+      url: window.location.origin,
+      sameAs: [] as string[],
+      logo: window.location.origin + '/favicon.svg'
+    };
+
+    let ld: any = organization;
+    if (currentPage === Page.CarDetails && selectedCar) {
+      ld = [
+        organization,
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Product',
+          name: selectedCar.name[language],
+          image: selectedCar.images,
+          description,
+          brand: { '@type': 'Brand', name: 'MarocWheels' },
+          offers: {
+            '@type': 'Offer',
+            priceCurrency: 'MAD',
+            price: selectedCar.pricePerDay,
+            availability: 'https://schema.org/InStock',
+            url: window.location.origin + canonicalPath
+          }
+        }
+      ];
+    }
+    script.text = JSON.stringify(ld);
+    document.head.appendChild(script);
 
   }, [currentPage, selectedCar, language]);
 

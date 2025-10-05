@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://meeedaymen.github.io/Location-de-voiture/sitemap.xml

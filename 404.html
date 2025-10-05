@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="0; url=/Location-de-voiture/">
+    <script>
+      // SPA redirect for GitHub Pages
+      (function() {
+        var base = '/Location-de-voiture';
+        var redirectUrl = base + '/';
+        var path = window.location.pathname;
+        var idx = path.indexOf(base);
+        if (idx !== -1) {
+          redirectUrl = path.substring(0, idx + base.length) + '/';
+        }
+        var query = window.location.search || '';
+        var hash = window.location.hash || '';
+        window.location.replace(redirectUrl + query + hash);
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>

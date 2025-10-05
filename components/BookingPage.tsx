@@ -47,7 +47,7 @@ const BookingPage: React.FC<BookingPageProps> = ({ car }) => {
 
     const phoneNumber = '212691268607';
     let message: string;
-    const carUrl = window.location.href;
+    const carUrl = `${window.location.origin}/?carId=${car.id}`;
 
     if (numberOfDays > 0) {
       message = t('whatsAppMessage')
