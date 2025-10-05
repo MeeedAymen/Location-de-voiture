@@ -5,7 +5,7 @@ import type { Car } from '../types';
 import CarCard from './CarCard';
 import { PriceIcon, SupportIcon, CarRangeIcon, StarIcon, SearchIcon, CalendarIcon, KeyIcon } from './IconComponents';
 import { useLanguage } from '../contexts/LanguageContext';
-import AITripPlanner from './AITripPlanner';
+ 
 
 interface HomePageProps {
   onSelectCar: (car: Car) => void;
@@ -144,14 +144,7 @@ const HomePage: React.FC<HomePageProps> = ({ onSelectCar, onNavigateToCars }) =>
         </div>
       </section>
 
-      {/* AI Trip Planner Section */}
-      <section className="py-20 bg-background dark:bg-gray-900">
-        <div className="container mx-auto px-6">
-            <div className="animate-fade-in-up">
-                <AITripPlanner />
-            </div>
-        </div>
-      </section>
+      
     </div>
   );
 };
