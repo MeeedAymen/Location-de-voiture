@@ -11,152 +11,152 @@ export const NAV_LINKS: NavLink[] = [
 export const CARS_DATA: Car[] = [
   {
     id: 1,
-    name: { en: 'Dacia Duster', fr: 'Dacia Duster', ar: 'داسيا داستر' },
-    type: { en: 'SUV', fr: 'SUV', ar: 'سيارة دفع رباعي' },
-    pricePerDay: 450,
+    name: { en: 'Mercedes-Benz S-Class', fr: 'Mercedes-Benz Classe S', ar: 'مرسيدس بنز الفئة S' },
+    type: { en: 'Luxury Sedan', fr: 'Berline de Luxe', ar: 'سيدان فاخر' },
+    pricePerDay: 2500,
     seats: 5,
-    transmission: { en: 'Manual', fr: 'Manuelle', ar: 'يدوي' },
-    fuel: { en: 'Diesel', fr: 'Diesel', ar: 'ديزل' },
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Hybrid', fr: 'Hybride', ar: 'هجين' },
     images: [
-        'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/2127740/pexels-photo-2127740.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=800'
+        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     description: {
-        en: 'The Dacia Duster is a robust and reliable SUV, perfect for exploring both Moroccan cities and rugged mountain roads. Its economical diesel engine makes it a great choice for long trips.',
-        fr: 'Le Dacia Duster est un SUV robuste et fiable, parfait pour explorer les villes marocaines et les routes de montagne accidentées. Son moteur diesel économique en fait un excellent choix pour les longs trajets.',
-        ar: 'داسيا داستر هي سيارة دفع رباعي قوية وموثوقة، مثالية لاستكشاف المدن المغربية والطرق الجبلية الوعرة. محركها الديزل الاقتصادي يجعلها خيارًا رائعًا للرحلات الطويلة.'
+        en: 'The epitome of luxury and sophistication, the Mercedes-Benz S-Class combines cutting-edge technology with unparalleled comfort. Experience the pinnacle of automotive excellence with premium materials, advanced driver assistance systems, and a whisper-quiet ride.',
+        fr: 'L\'incarnation du luxe et de la sophistication, la Mercedes-Benz Classe S combine une technologie de pointe avec un confort inégalé. Découvrez le summum de l\'excellence automobile avec des matériaux premium, des systèmes d\'assistance à la conduite avancés et une conduite ultra-silencieuse.',
+        ar: 'تجسيد الفخامة والأناقة، تجمع مرسيدس بنز الفئة S بين التكنولوجيا المتطورة والراحة الفائقة. استمتع بقمة التميز في عالم السيارات مع مواد فاخرة، أنظمة مساعدة متقدمة، وقيادة صامتة.'
     },
     features: [
-        { en: 'Air Conditioning', fr: 'Climatisation', ar: 'تكييف هواء' },
-        { en: 'Bluetooth', fr: 'Bluetooth', ar: 'بلوتوث' },
-        { en: 'GPS Navigation', fr: 'Navigation GPS', ar: 'نظام ملاحة GPS' },
-        { en: 'Spacious Trunk', fr: 'Coffre spacieux', ar: 'صندوق واسع' }
+        { en: 'Massage Seats', fr: 'Sièges massants', ar: 'مقاعد مساج' },
+        { en: 'Burmester Sound', fr: 'Son Burmester', ar: 'نظام صوتي Burmester' },
+        { en: 'Magic Body Control', fr: 'Magic Body Control', ar: 'نظام التحكم الذكي' },
+        { en: 'Ambient Lighting', fr: 'Éclairage d\'ambiance', ar: 'إضاءة محيطية' }
     ]
   },
   {
     id: 2,
-    name: { en: 'Renault Clio', fr: 'Renault Clio', ar: 'رينو كليو' },
-    type: { en: 'Hatchback', fr: 'Citadine', ar: 'هاتشباك' },
-    pricePerDay: 300,
-    seats: 5,
-    transmission: { en: 'Manual', fr: 'Manuelle', ar: 'يدوي' },
+    name: { en: 'BMW X7', fr: 'BMW X7', ar: 'بي إم دبليو X7' },
+    type: { en: 'Luxury SUV', fr: 'SUV de Luxe', ar: 'سيارة دفع رباعي فاخرة' },
+    pricePerDay: 2800,
+    seats: 7,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
     fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
     images: [
-        'https://images.pexels.com/photos/191240/pexels-photo-191240.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1429748/pexels-photo-1429748.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/707046/pexels-photo-707046.jpeg?auto=compress&cs=tinysrgb&w=800'
+        'https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/3802510/pexels-photo-3802510.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     description: {
-        en: 'The Renault Clio is a compact and stylish hatchback, ideal for navigating the narrow streets of Moroccan medinas. It offers excellent fuel efficiency and is easy to park.',
-        fr: 'La Renault Clio est une citadine compacte et élégante, idéale pour naviguer dans les rues étroites des médinas marocaines. Elle offre une excellente efficacité énergétique et est facile à garer.',
-        ar: 'رينو كليو هي سيارة هاتشباك مدمجة وأنيقة، مثالية للتنقل في الشوارع الضيقة للمدن المغربية القديمة. تتميز بكفاءة ممتازة في استهلاك الوقود وسهولة ركنها.'
+        en: 'Command attention with the BMW X7, the ultimate expression of luxury and performance. This full-size SUV offers spacious three-row seating, powerful V8 engines, and the latest iDrive technology, all wrapped in an imposing yet elegant design.',
+        fr: 'Attirez l\'attention avec la BMW X7, l\'expression ultime du luxe et de la performance. Ce SUV grand format offre des sièges spacieux sur trois rangées, des moteurs V8 puissants et la dernière technologie iDrive, le tout dans un design imposant mais élégant.',
+        ar: 'اجذب الأنظار مع بي إم دبليو X7، التعبير المثالي عن الفخامة والأداء. توفر هذه السيارة ذات الدفع الرباعي الكبيرة مقاعد فسيحة بثلاث صفوف، محركات V8 قوية، وأحدث تقنيات iDrive، كل ذلك بتصميم مهيب وأنيق.'
     },
     features: [
-        { en: 'Air Conditioning', fr: 'Climatisation', ar: 'تكييف هواء' },
-        { en: 'USB Port', fr: 'Port USB', ar: 'منفذ USB' },
-        { en: 'Compact Size', fr: 'Taille compacte', ar: 'حجم مدمج' },
-        { en: 'Fuel Efficient', fr: 'Économe en carburant', ar: 'كفاءة في استهلاك الوقود' }
+        { en: 'Panoramic Sunroof', fr: 'Toit ouvrant panoramique', ar: 'فتحة سقف بانورامية' },
+        { en: 'Premium Leather', fr: 'Cuir premium', ar: 'جلد فاخر' },
+        { en: 'xDrive All-Wheel', fr: 'Traction xDrive', ar: 'دفع رباعي xDrive' },
+        { en: 'Crystal Gear Selector', fr: 'Sélecteur Crystal', ar: 'مبدل Crystal' }
     ]
   },
   {
     id: 3,
-    name: { en: 'Hyundai Accent', fr: 'Hyundai Accent', ar: 'هيونداي أكسنت' },
-    type: { en: 'Sedan', fr: 'Berline', ar: 'سيدان' },
-    pricePerDay: 350,
+    name: { en: 'Audi A8', fr: 'Audi A8', ar: 'أودي A8' },
+    type: { en: 'Luxury Sedan', fr: 'Berline de Luxe', ar: 'سيدان فاخر' },
+    pricePerDay: 2200,
     seats: 5,
     transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
-    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
+    fuel: { en: 'Hybrid', fr: 'Hybride', ar: 'هجين' },
     images: [
-        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/136872/pexels-photo-136872.jpeg?auto=compress&cs=tinysrgb&w=800'
+        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     description: {
-        en: 'A comfortable and smooth sedan, the Hyundai Accent is perfect for family trips or business travel. The automatic transmission provides a relaxing driving experience.',
-        fr: 'Berline confortable et douce, la Hyundai Accent est parfaite pour les voyages en famille ou d\'affaires. La transmission automatique offre une expérience de conduite relaxante.',
-        ar: 'هيونداي أكسنت هي سيارة سيدان مريحة وسلسة، مثالية للرحلات العائلية أو سفر الأعمال. يوفر ناقل الحركة الأوتوماتيكي تجربة قيادة مريحة.'
+        en: 'Discover the perfect blend of elegance and innovation with the Audi A8. This flagship sedan features quattro all-wheel drive, adaptive air suspension, and a revolutionary MMI touch response system, delivering an unparalleled driving experience.',
+        fr: 'Découvrez le mélange parfait d\'élégance et d\'innovation avec l\'Audi A8. Cette berline phare dispose de la traction intégrale quattro, d\'une suspension pneumatique adaptive et d\'un système révolutionnaire MMI touch response, offrant une expérience de conduite inégalée.',
+        ar: 'اكتشف المزيج المثالي بين الأناقة والابتكار مع أودي A8. تتميز هذه السيارة الفاخرة بنظام الدفع الرباعي quattro، ونظام التعليق الهوائي التكيفي، ونظام MMI المتطور، مما يوفر تجربة قيادة لا مثيل لها.'
     },
     features: [
-        { en: 'Air Conditioning', fr: 'Climatisation', ar: 'تكييف هواء' },
-        { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
-        { en: 'Cruise Control', fr: 'Régulateur de vitesse', ar: 'مثبت سرعة' },
-        { en: 'Comfortable Seating', fr: 'Sièges confortables', ar: 'مقاعد مريحة' }
+        { en: 'Virtual Cockpit', fr: 'Tableau de bord virtuel', ar: 'لوحة عدادات افتراضية' },
+        { en: 'Bang & Olufsen Audio', fr: 'Audio Bang & Olufsen', ar: 'نظام صوتي Bang & Olufsen' },
+        { en: 'Matrix LED Lights', fr: 'Phares Matrix LED', ar: 'مصابيح Matrix LED' },
+        { en: 'Valcona Leather', fr: 'Cuir Valcona', ar: 'جلد Valcona' }
     ]
   },
   {
     id: 4,
-    name: { en: 'Toyota Prado', fr: 'Toyota Prado', ar: 'تويوتا برادو' },
-    type: { en: '4x4', fr: '4x4', ar: 'دفع رباعي' },
-    pricePerDay: 900,
-    seats: 7,
-    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
-    fuel: { en: 'Diesel', fr: 'Diesel', ar: 'ديزل' },
-    images: [
-        'https://images.pexels.com/photos/3782235/pexels-photo-3782235.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/3802661/pexels-photo-3802661.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/4061539/pexels-photo-4061539.jpeg?auto=compress&cs=tinysrgb&w=800'
-    ],
-    description: {
-        en: 'For the ultimate Moroccan adventure, the Toyota Prado is your go-to vehicle. This powerful 4x4 can handle desert dunes and mountain tracks with ease, offering space and luxury.',
-        fr: 'Pour l\'aventure marocaine ultime, le Toyota Prado est votre véhicule de prédilection. Ce 4x4 puissant peut affronter les dunes du désert et les pistes de montagne avec aisance, offrant espace et luxe.',
-        ar: 'لمغامرة مغربية لا مثيل لها، تويوتا برادو هي سيارتك المثالية. يمكن لهذه السيارة ذات الدفع الرباعي القوية التعامل مع الكثبان الصحراوية والمسارات الجبلية بسهولة، مع توفير المساحة والرفاهية.'
-    },
-    features: [
-        { en: 'All-Wheel Drive', fr: 'Traction intégrale', ar: 'دفع رباعي' },
-        { en: '7 Seats', fr: '7 Sièges', ar: '7 مقاعد' },
-        { en: 'Premium Sound System', fr: 'Système audio premium', ar: 'نظام صوتي فاخر' },
-        { en: 'Sunroof', fr: 'Toit ouvrant', ar: 'فتحة سقف' }
-    ]
-  },
-  {
-    id: 5,
-    name: { en: 'Kia Picanto', fr: 'Kia Picanto', ar: 'كيا بيكانتو' },
-    type: { en: 'Hatchback', fr: 'Citadine', ar: 'هاتشباك' },
-    pricePerDay: 250,
+    name: { en: 'Porsche 911', fr: 'Porsche 911', ar: 'بورش 911' },
+    type: { en: 'Sports Car', fr: 'Voiture de Sport', ar: 'سيارة رياضية' },
+    pricePerDay: 3500,
     seats: 4,
     transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
     fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
     images: [
-        'https://images.pexels.com/photos/951318/pexels-photo-951318.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/1035108/pexels-photo-1035108.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/241316/pexels-photo-241316.jpeg?auto=compress&cs=tinysrgb&w=800'
+        'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/2127739/pexels-photo-2127739.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/2127740/pexels-photo-2127740.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     description: {
-        en: 'The most economical option for city driving. The Kia Picanto is small, zippy, and incredibly easy to handle in heavy traffic. Perfect for solo travelers or couples.',
-        fr: 'L\'option la plus économique pour la conduite en ville. La Kia Picanto est petite, vive et incroyablement facile à manier dans un trafic dense. Parfaite pour les voyageurs en solo ou les couples.',
-        ar: 'الخيار الأكثر اقتصادا للقيادة في المدينة. كيا بيكانتو صغيرة وسريعة وسهلة التحكم بشكل لا يصدق في حركة المرور الكثيفة. مثالية للمسافرين المنفردين أو الأزواج.'
+        en: 'Experience automotive perfection with the legendary Porsche 911. This iconic sports car delivers breathtaking performance with its rear-engine layout, precision handling, and unmistakable design. Perfect for those who demand the ultimate driving experience.',
+        fr: 'Découvrez la perfection automobile avec la légendaire Porsche 911. Cette voiture de sport emblématique offre des performances époustouflantes avec sa configuration moteur arrière, sa maniabilité de précision et son design reconnaissable. Parfait pour ceux qui recherchent l\'expérience de conduite ultime.',
+        ar: 'اختبر الكمال في عالم السيارات مع بورش 911 الأسطورية. توفر هذه السيارة الرياضية الأيقونية أداءً مذهلاً مع تخطيط محركها الخلفي، وقدرات المناولة الدقيقة، وتصميمها المميز. مثالية لمن يبحثون عن تجربة قيادة لا مثيل لها.'
     },
     features: [
-        { en: 'Air Conditioning', fr: 'Climatisation', ar: 'تكييف هواء' },
-        { en: 'Very Economical', fr: 'Très économique', ar: 'اقتصادية جدا' },
-        { en: 'Easy to Park', fr: 'Facile à garer', ar: 'سهلة الركن' },
-        { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' }
+        { en: 'Turbocharged Engine', fr: 'Moteur turbocompressé', ar: 'محرك توربيني' },
+        { en: 'PDK Transmission', fr: 'Transmission PDK', ar: 'ناقل حركة PDK' },
+        { en: 'Sport Chrono Package', fr: 'Pack Sport Chrono', ar: 'حزمة Sport Chrono' },
+        { en: 'Active Aerodynamics', fr: 'Aérodynamique active', ar: 'ديناميكية هوائية نشطة' }
+    ]
+  },
+  {
+    id: 5,
+    name: { en: 'Range Rover', fr: 'Range Rover', ar: 'رينج روفر' },
+    type: { en: 'Luxury 4x4', fr: '4x4 de Luxe', ar: 'دفع رباعي فاخر' },
+    pricePerDay: 3000,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Diesel', fr: 'Diesel', ar: 'ديزل' },
+    images: [
+        'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'The Range Rover redefines luxury off-road capability. Combining British elegance with formidable terrain-conquering abilities, this vehicle offers a serene cabin, advanced Terrain Response system, and the perfect balance between city sophistication and wilderness adventure.',
+        fr: 'Le Range Rover redéfinit la capacité tout-terrain de luxe. Alliant l\'élégance britannique à des capacités de conquête de terrain formidables, ce véhicule offre une cabine sereine, un système Terrain Response avancé et l\'équilibre parfait entre sophistication urbaine et aventure sauvage.',
+        ar: 'رينج روفر يعيد تعريف قدرة السيارات الفاخرة على الطرق الوعرة. يجمع بين الأناقة البريطانية وقدرات قهر التضاريس الرائعة، ويوفر هذه السيارة مقصورة هادئة، نظام Terrain Response المتقدم، والتوازن المثالي بين الأناقة الحضرية ومغامرة البرية.'
+    },
+    features: [
+        { en: 'Terrain Response 2', fr: 'Terrain Response 2', ar: 'نظام Terrain Response 2' },
+        { en: 'Air Suspension', fr: 'Suspension pneumatique', ar: 'نظام تعليق هوائي' },
+        { en: 'Windsor Leather', fr: 'Cuir Windsor', ar: 'جلد Windsor' },
+        { en: 'Meridian Sound System', fr: 'Son Meridian', ar: 'نظام صوتي Meridian' }
     ]
   },
   {
     id: 6,
-    name: { en: 'Peugeot 301', fr: 'Peugeot 301', ar: 'بيجو 301' },
-    type: { en: 'Sedan', fr: 'Berline', ar: 'سيدان' },
-    pricePerDay: 400,
-    seats: 5,
-    transmission: { en: 'Manual', fr: 'Manuelle', ar: 'يدوي' },
-    fuel: { en: 'Diesel', fr: 'Diesel', ar: 'ديزل' },
+    name: { en: 'Bentley Continental GT', fr: 'Bentley Continental GT', ar: 'بنتلي كونتيننتال GT' },
+    type: { en: 'Luxury GT', fr: 'GT de Luxe', ar: 'GT فاخر' },
+    pricePerDay: 4000,
+    seats: 4,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
     images: [
-        'https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=800',
-        'https://images.pexels.com/photos/261986/pexels-photo-261986.jpeg?auto=compress&cs=tinysrgb&w=800'
+        'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/191240/pexels-photo-191240.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1429748/pexels-photo-1429748.jpeg?auto=compress&cs=tinysrgb&w=1200'
     ],
     description: {
-        en: 'A reliable and spacious sedan that offers a comfortable ride for long distances. The Peugeot 301 is known for its large trunk space, making it ideal for travelers with a lot of luggage.',
-        fr: 'Une berline fiable et spacieuse qui offre une conduite confortable sur de longues distances. La Peugeot 301 est connue pour son grand coffre, ce qui la rend idéale pour les voyageurs avec beaucoup de bagages.',
-        ar: 'سيارة سيدان موثوقة وواسعة توفر قيادة مريحة للمسافات الطويلة. تشتهر بيجو 301 بمساحة صندوقها الكبيرة، مما يجعلها مثالية للمسافرين الذين لديهم الكثير من الأمتعة.'
+        en: 'Indulge in the ultimate expression of British luxury with the Bentley Continental GT. This grand tourer combines handcrafted excellence, powerful W12 performance, and exquisite attention to detail. Every journey becomes an unforgettable experience of refinement and power.',
+        fr: 'Offrez-vous l\'expression ultime du luxe britannique avec la Bentley Continental GT. Ce grand tourisme combine l\'excellence artisanale, la performance puissante du W12 et une attention exquise aux détails. Chaque voyage devient une expérience inoubliable de raffinement et de puissance.',
+        ar: 'استمتع بالتعبير الأسمى للفخامة البريطانية مع بنتلي كونتيننتال GT. تجمع هذه السيارة الفاخرة بين التميز الحرفي اليدوي، والأداء القوي لمحرك W12، والاهتمام الفائق بالتفاصيل. تصبح كل رحلة تجربة لا تُنسى من الأناقة والقوة.'
     },
     features: [
-        { en: 'Spacious Trunk', fr: 'Coffre spacieux', ar: 'صندوق واسع' },
-        { en: 'Fuel Efficient Diesel', fr: 'Diesel économe', ar: 'ديزل اقتصادي' },
-        { en: 'Bluetooth', fr: 'Bluetooth', ar: 'بلوتوث' },
-        { en: 'Comfortable Ride', fr: 'Conduite confortable', ar: 'قيادة مريحة' }
+        { en: 'W12 Twin Turbo', fr: 'W12 Bi-Turbo', ar: 'W12 Twin Turbo' },
+        { en: 'Diamond Knurling', fr: 'Moire diamant', ar: 'تشطيبات الماس' },
+        { en: 'Naim Audio System', fr: 'Audio Naim', ar: 'نظام صوتي Naim' },
+        { en: 'Rotating Display', fr: 'Écran rotatif', ar: 'شاشة دوارة' }
     ]
   }
 ];
