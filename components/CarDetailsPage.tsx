@@ -1,4 +1,11 @@
 import React, { useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Thumbs, FreeMode } from 'swiper/modules';
+import type { Swiper as SwiperType } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import 'swiper/css/free-mode';
 import type { Car } from '../types';
 import { SeatIcon, TransmissionIcon, FuelIcon } from './IconComponents';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -9,28 +16,86 @@ interface CarDetailsPageProps {
 }
 
 const CarDetailsPage: React.FC<CarDetailsPageProps> = ({ car, onBookNow }) => {
-  const [currentImage, setCurrentImage] = useState(car.images[0]);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
   const { language, t } = useLanguage();
 
   return (
     <div className="container mx-auto px-6 py-12 animate-fade-in-up">
+      <style>{`
+        .main-carousel .swiper-button-next,
+        .main-carousel .swiper-button-prev {
+          color: var(--primary, #f59e0b);
+          background: rgba(255, 255, 255, 0.9);
+          width: 44px;
+          height: 44px;
+          border-radius: 50%;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+        .main-carousel .swiper-button-next:hover,
+        .main-carousel .swiper-button-prev:hover {
+          background: rgba(255, 255, 255, 1);
+        }
+        .dark .main-carousel .swiper-button-next,
+        .dark .main-carousel .swiper-button-prev {
+          background: rgba(31, 41, 55, 0.9);
+          color: var(--primary, #f59e0b);
+        }
+        .dark .main-carousel .swiper-button-next:hover,
+        .dark .main-carousel .swiper-button-prev:hover {
+          background: rgba(31, 41, 55, 1);
+        }
+        .main-carousel .swiper-button-next::after,
+        .main-carousel .swiper-button-prev::after {
+          font-size: 16px;
+          font-weight: bold;
+        }
+        .thumbnail-carousel .swiper-slide-thumb-active img {
+          opacity: 1 !important;
+          border: 2px solid var(--primary, #f59e0b);
+        }
+      `}</style>
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-card overflow-hidden">
         <div className="grid grid-cols-1 lg:grid-cols-2">
           <div className="p-4">
-            <img src={currentImage} alt={car.name[language]} className="w-full h-96 object-cover rounded-lg mb-4" />
-            <div className="grid grid-cols-4 gap-2">
+            {/* Main Image Swiper */}
+            <Swiper
+              modules={[Navigation, Thumbs, FreeMode]}
+              spaceBetween={10}
+              navigation={true}
+              thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+              className="main-carousel mb-4 rounded-lg"
+            >
               {car.images.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt={`${car.name[language]} view ${index + 1}`}
-                  onClick={() => setCurrentImage(img)}
-                  className={`w-full h-24 object-cover rounded-md cursor-pointer transition-all duration-200 ${
-                    currentImage === img ? 'ring-2 ring-primary ring-offset-2' : 'opacity-70 hover:opacity-100'
-                  }`}
-                />
+                <SwiperSlide key={index}>
+                  <img 
+                    src={img} 
+                    alt={`${car.name[language]} view ${index + 1}`} 
+                    className="w-full h-96 object-cover rounded-lg"
+                  />
+                </SwiperSlide>
               ))}
-            </div>
+            </Swiper>
+
+            {/* Thumbnail Swiper */}
+            <Swiper
+              modules={[FreeMode, Navigation, Thumbs]}
+              onSwiper={setThumbsSwiper}
+              spaceBetween={8}
+              slidesPerView={4}
+              freeMode={true}
+              watchSlidesProgress={true}
+              className="thumbnail-carousel"
+            >
+              {car.images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <img 
+                    src={img} 
+                    alt={`${car.name[language]} thumbnail ${index + 1}`} 
+                    className="w-full h-24 object-cover rounded-md cursor-pointer opacity-70 hover:opacity-100 transition-opacity duration-200"
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
           <div className="p-8 flex flex-col">
             <span className="text-sm font-semibold bg-secondary/10 dark:bg-secondary/20 text-secondary px-2 py-1 rounded self-start">{car.type[language]}</span>

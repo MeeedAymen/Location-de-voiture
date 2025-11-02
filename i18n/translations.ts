@@ -57,6 +57,8 @@ export const translations: { [key: string]: { [key in Locale]: string } } = {
   sortBy: { en: 'Sort by', fr: 'Trier par', ar: 'الترتيب حسب' },
   priceAsc: { en: 'Price: Low to High', fr: 'Prix : Croissant', ar: 'السعر: من الأقل إلى الأعلى' },
   priceDesc: { en: 'Price: High to Low', fr: 'Prix : Décroissant', ar: 'السعر: من الأعلى إلى الأقل' },
+  noCarsFound: { en: 'No cars found for this filter.', fr: 'Aucune voiture trouvée pour ce filtre.', ar: 'لم يتم العثور على سيارات لهذا الفلتر.' },
+  tryDifferentFilter: { en: 'Try selecting a different filter or click "All" to see all available cars.', fr: 'Essayez de sélectionner un autre filtre ou cliquez sur "Tous" pour voir toutes les voitures disponibles.', ar: 'جرب اختيار فلتر مختلف أو انقر على "الكل" لرؤية جميع السيارات المتاحة.' },
 
   // Car Details Page
   details: { en: 'Details', fr: 'Détails', ar: 'التفاصيل' },

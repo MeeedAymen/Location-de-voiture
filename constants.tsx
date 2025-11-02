@@ -158,6 +158,156 @@ export const CARS_DATA: Car[] = [
         { en: 'Naim Audio System', fr: 'Audio Naim', ar: 'نظام صوتي Naim' },
         { en: 'Rotating Display', fr: 'Écran rotatif', ar: 'شاشة دوارة' }
     ]
+  },
+  {
+    id: 7,
+    name: { en: 'Rolls-Royce Ghost', fr: 'Rolls-Royce Ghost', ar: 'رولز رويس جوست' },
+    type: { en: 'Ultra Luxury Sedan', fr: 'Berline Ultra Luxe', ar: 'سيدان فاخر جداً' },
+    pricePerDay: 5000,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
+    images: [
+        'https://images.pexels.com/photos/136872/pexels-photo-136872.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'Experience unparalleled luxury with the Rolls-Royce Ghost. Handcrafted to perfection, this ultra-luxury sedan offers whisper-quiet cabins, hand-stitched leather, and the famous Magic Carpet Ride. Every detail reflects British craftsmanship at its finest.',
+        fr: 'Découvrez un luxe sans pareil avec la Rolls-Royce Ghost. Artisanat à la perfection, cette berline ultra-luxe offre des cabines ultra-silencieuses, du cuir cousu à la main et la célèbre Magic Carpet Ride. Chaque détail reflète l\'artisanat britannique à son meilleur.',
+        ar: 'اختبر الفخامة التي لا مثيل لها مع رولز رويس جوست. مصنوعة يدوياً إلى الكمال، توفر هذه السيارة الفاخرة جداً مقصورات صامتة جداً، جلد مخيط يدوياً، ورحلة Magic Carpet الشهيرة. كل تفاصيل تعكس الحرفية البريطانية في أفضل حالاتها.'
+    },
+    features: [
+        { en: 'Magic Carpet Ride', fr: 'Magic Carpet Ride', ar: 'رحلة Magic Carpet' },
+        { en: 'Starlight Headliner', fr: 'Plafond Starlight', ar: 'سقف Starlight' },
+        { en: 'Handcrafted Leather', fr: 'Cuir artisanal', ar: 'جلد مصنوع يدوياً' },
+        { en: 'Whisper-Quiet Cabin', fr: 'Cabine ultra-silencieuse', ar: 'مقصورة صامتة جداً' }
+    ]
+  },
+  {
+    id: 8,
+    name: { en: 'Lamborghini Urus', fr: 'Lamborghini Urus', ar: 'لامبورغيني أوروس' },
+    type: { en: 'Super SUV', fr: 'Super SUV', ar: 'سيارة دفع رباعي خارقة' },
+    pricePerDay: 4500,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
+    images: [
+        'https://images.pexels.com/photos/2127739/pexels-photo-2127739.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/2127740/pexels-photo-2127740.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1637859/pexels-photo-1637859.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'The Lamborghini Urus redefines the super SUV category. Combining the soul of a super sports car with the functionality of an SUV, it delivers breathtaking performance, striking design, and everyday usability. Experience the power of a raging bull.',
+        fr: 'La Lamborghini Urus redéfinit la catégorie des super SUV. Alliant l\'âme d\'une super sportive à la fonctionnalité d\'un SUV, elle offre des performances époustouflantes, un design saisissant et une utilisabilité quotidienne. Découvrez la puissance d\'un taureau enragé.',
+        ar: 'لامبورغيني أوروس تعيد تعريف فئة السيارات الرياضية الفاخرة. تجمع بين روح سيارة رياضية خارقة ووظائف سيارة دفع رباعي، توفر أداءً مذهلاً وتصميماً مذهلاً وإمكانية استخدام يومية. اختبر قوة الثور الهائج.'
+    },
+    features: [
+        { en: 'V8 Twin Turbo', fr: 'V8 Bi-Turbo', ar: 'V8 Twin Turbo' },
+        { en: 'ANIMA Driving Modes', fr: 'Modes ANIMA', ar: 'أنماط قيادة ANIMA' },
+        { en: 'Carbon Fiber', fr: 'Fibre de carbone', ar: 'ألياف الكربون' },
+        { en: 'Bang & Olufsen Audio', fr: 'Audio Bang & Olufsen', ar: 'نظام صوتي Bang & Olufsen' }
+    ]
+  },
+  {
+    id: 9,
+    name: { en: 'Tesla Model S', fr: 'Tesla Model S', ar: 'تسلا موديل S' },
+    type: { en: 'Electric Luxury', fr: 'Électrique de Luxe', ar: 'سيارة كهربائية فاخرة' },
+    pricePerDay: 2300,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Electric', fr: 'Électrique', ar: 'كهربائية' },
+    images: [
+        'https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'Experience the future of driving with the Tesla Model S. This all-electric luxury sedan combines zero emissions with incredible acceleration, cutting-edge Autopilot technology, and a minimalist interior. Silent, fast, and sustainable.',
+        fr: 'Découvrez l\'avenir de la conduite avec la Tesla Model S. Cette berline de luxe entièrement électrique combine zéro émission avec une accélération incroyable, une technologie Autopilot de pointe et un intérieur minimaliste. Silencieuse, rapide et durable.',
+        ar: 'اختبر مستقبل القيادة مع تسلا موديل S. تجمع هذه السيارة الكهربائية الفاخرة بين انعدام الانبعاثات مع تسارع لا يصدق، وتكنولوجيا Autopilot المتطورة، وداخل بسيط. صامتة وسريعة ومستدامة.'
+    },
+    features: [
+        { en: 'Autopilot', fr: 'Autopilot', ar: 'القيادة الذاتية' },
+        { en: 'Supercharger Network', fr: 'Réseau Supercharger', ar: 'شبكة Supercharger' },
+        { en: 'Ludicrous Mode', fr: 'Mode Ludicrous', ar: 'وضع Ludicrous' },
+        { en: 'Over-the-Air Updates', fr: 'Mises à jour OTA', ar: 'تحديثات لاسلكية' }
+    ]
+  },
+  {
+    id: 10,
+    name: { en: 'Maserati Quattroporte', fr: 'Maserati Quattroporte', ar: 'مازيراتي كواتروبورت' },
+    type: { en: 'Luxury Sedan', fr: 'Berline de Luxe', ar: 'سيدان فاخر' },
+    pricePerDay: 2700,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
+    images: [
+        'https://images.pexels.com/photos/191240/pexels-photo-191240.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1429748/pexels-photo-1429748.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/1545743/pexels-photo-1545743.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'Embrace Italian elegance with the Maserati Quattroporte. This luxury sedan combines Italian style with powerful V8 engines, sophisticated interiors, and the unmistakable Maserati sound. A perfect blend of performance and luxury.',
+        fr: 'Adoptez l\'élégance italienne avec la Maserati Quattroporte. Cette berline de luxe allie style italien, moteurs V8 puissants, intérieurs sophistiqués et le son inimitable Maserati. Un mélange parfait de performance et de luxe.',
+        ar: 'استمتع بالأناقة الإيطالية مع مازيراتي كواتروبورت. تجمع هذه السيارة الفاخرة بين الأسلوب الإيطالي ومحركات V8 القوية والداخلية المتطورة والصوت المميز لمازيراتي. مزيج مثالي بين الأداء والفخامة.'
+    },
+    features: [
+        { en: 'Ferrari V8 Engine', fr: 'Moteur V8 Ferrari', ar: 'محرك V8 من Ferrari' },
+        { en: 'Skyhook Suspension', fr: 'Suspension Skyhook', ar: 'نظام تعليق Skyhook' },
+        { en: 'Premium Italian Leather', fr: 'Cuir italien premium', ar: 'جلد إيطالي فاخر' },
+        { en: 'Sonus Faber Audio', fr: 'Audio Sonus Faber', ar: 'نظام صوتي Sonus Faber' }
+    ]
+  },
+  {
+    id: 11,
+    name: { en: 'Lexus LS', fr: 'Lexus LS', ar: 'لكزس LS' },
+    type: { en: 'Luxury Sedan', fr: 'Berline de Luxe', ar: 'سيدان فاخر' },
+    pricePerDay: 2400,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Hybrid', fr: 'Hybride', ar: 'هجين' },
+    images: [
+        'https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/116675/pexels-photo-116675.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'Discover Japanese craftsmanship at its finest with the Lexus LS. This flagship luxury sedan offers exceptional comfort, advanced technology, and legendary reliability. Experience the perfect harmony of performance, luxury, and tranquility.',
+        fr: 'Découvrez l\'artisanat japonais à son meilleur avec la Lexus LS. Cette berline de luxe phare offre un confort exceptionnel, une technologie avancée et une fiabilité légendaire. Découvrez l\'harmonie parfaite entre performance, luxe et tranquillité.',
+        ar: 'اكتشف الحرفية اليابانية في أفضل حالاتها مع لكزس LS. توفر هذه السيارة الفاخرة الرائدة راحة استثنائية وتكنولوجيا متقدمة وموثوقية أسطورية. اختبر الانسجام المثالي بين الأداء والفخامة والهدوء.'
+    },
+    features: [
+        { en: 'Mark Levinson Audio', fr: 'Audio Mark Levinson', ar: 'نظام صوتي Mark Levinson' },
+        { en: 'Shimamoku Wood', fr: 'Bois Shimamoku', ar: 'خشب Shimamoku' },
+        { en: '24-Inch Rear Display', fr: 'Écran arrière 24 pouces', ar: 'شاشة خلفية 24 بوصة' },
+        { en: 'Adaptive Variable Suspension', fr: 'Suspension adaptative', ar: 'نظام تعليق تكيفي' }
+    ]
+  },
+  {
+    id: 12,
+    name: { en: 'Jaguar F-Pace', fr: 'Jaguar F-Pace', ar: 'جاغوار F-Pace' },
+    type: { en: 'Luxury SUV', fr: 'SUV de Luxe', ar: 'سيارة دفع رباعي فاخرة' },
+    pricePerDay: 2600,
+    seats: 5,
+    transmission: { en: 'Automatic', fr: 'Automatique', ar: 'أوتوماتيك' },
+    fuel: { en: 'Gasoline', fr: 'Essence', ar: 'بنزين' },
+    images: [
+        'https://images.pexels.com/photos/3782235/pexels-photo-3782235.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/3802661/pexels-photo-3802661.jpeg?auto=compress&cs=tinysrgb&w=1200',
+        'https://images.pexels.com/photos/4061539/pexels-photo-4061539.jpeg?auto=compress&cs=tinysrgb&w=1200'
+    ],
+    description: {
+        en: 'Experience British luxury and performance with the Jaguar F-Pace. This stylish SUV combines Jaguar\'s sporting heritage with practical versatility. Featuring powerful engines, refined interiors, and advanced technology, it\'s perfect for both city and adventure.',
+        fr: 'Découvrez le luxe et la performance britanniques avec la Jaguar F-Pace. Ce SUV élégant allie l\'héritage sportif de Jaguar à une polyvalence pratique. Doté de moteurs puissants, d\'intérieurs raffinés et d\'une technologie avancée, il est parfait pour la ville et l\'aventure.',
+        ar: 'اختبر الفخامة والأداء البريطانيين مع جاغوار F-Pace. تجمع هذه السيارة الرياضية الأنيقة بين التراث الرياضي لجاغوار والتنوع العملي. تتميز بمحركات قوية وداخلية راقية وتكنولوجيا متقدمة، مما يجعلها مثالية للمدينة والمغامرة.'
+    },
+    features: [
+        { en: 'Ingenium Engine', fr: 'Moteur Ingenium', ar: 'محرك Ingenium' },
+        { en: 'All-Wheel Drive', fr: 'Traction intégrale', ar: 'دفع رباعي' },
+        { en: 'Windsor Leather', fr: 'Cuir Windsor', ar: 'جلد Windsor' },
+        { en: 'Meridian Sound System', fr: 'Son Meridian', ar: 'نظام صوتي Meridian' }
+    ]
   }
 ];
 

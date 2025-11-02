@@ -28,7 +28,22 @@ const CarsPage: React.FC<CarsPageProps> = ({ onSelectCar }) => {
   const processedCars = useMemo(() => {
     let filtered = filter === 'All'
       ? CARS_DATA
-      : CARS_DATA.filter(car => car.type.en === filter);
+      : CARS_DATA.filter(car => {
+          const carType = car.type.en.toLowerCase();
+          const filterType = filter.toLowerCase();
+          
+          // Map filter types to search patterns
+          if (filterType === 'suv') {
+            return carType.includes('suv');
+          } else if (filterType === 'sedan') {
+            return carType.includes('sedan');
+          } else if (filterType === 'hatchback') {
+            return carType.includes('hatchback');
+          } else if (filterType === '4x4') {
+            return carType.includes('4x4');
+          }
+          return false;
+        });
     
     switch (sortOption) {
       case 'price-asc':
@@ -78,11 +93,25 @@ const CarsPage: React.FC<CarsPageProps> = ({ onSelectCar }) => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {processedCars.map((car, index) => (
-          <div key={car.id} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
-            <CarCard car={car} onSelect={onSelectCar} />
+        {processedCars.length > 0 ? (
+          processedCars.map((car, index) => (
+            <div key={car.id} className="animate-fade-in-up" style={{ animationDelay: `${0.1 * index}s` }}>
+              <CarCard car={car} onSelect={onSelectCar} />
+            </div>
+          ))
+        ) : (
+          <div className="col-span-full text-center py-16 animate-fade-in-up">
+            <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 max-w-md mx-auto">
+              <svg className="w-16 h-16 mx-auto mb-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <p className="text-lg font-semibold text-text-dark dark:text-white mb-2">{t('noCarsFound')}</p>
+              <p className="text-sm text-text-light dark:text-gray-400">
+                {filter !== 'All' && t('tryDifferentFilter')}
+              </p>
+            </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
